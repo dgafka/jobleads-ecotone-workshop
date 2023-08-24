@@ -23,7 +23,7 @@ final class OrderService
         $order = Order::create($placeOrder->orderId, $placeOrder->productName);
         $orderRepository->save($order);
 
-//        $shippingService->ship($order);
+        $shippingService->ship($order);
     }
 
     #[CommandHandler]
